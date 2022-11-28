@@ -7,3 +7,4 @@ The site is an app for booking assisted taxi services. There is no underlying fu
 
 Link to live preview of project: https://fardtjanst.netlify.app/
 
+by Jessica Ejelöv, jessicaejelov@gmail.com
