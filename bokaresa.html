@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- faviconer -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Färdtjänst i Umeå kommun</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <!-- skip to main content, only visible when in focus -->
+            <a class="skip-nav" href="#main">Till huvudinnehållet</a>
+            <nav>
+                <!-- nav hamburger button -->
+                <button name="meny" class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/Logotyp.svg" alt="Färdtjänst i Umeå kommun logotyp"></a>
+                <div class="menu">
+
+                    <!-- desktop menu -->
+                    <a href="minasidor.html">Mina Sidor</a>
+                    <div class="dropdownbtn">
+                        <button class="menubtn">Resor<img class="menuopen" aria-label="dropdown-menu" src="img/expand_more_white_24dp.svg"
+                            alt="Resor">
+                    </button>
+                        <!-- dropdown menu -->
+                        <div class="dropdown">
+                            <a href="minaresor.html">Mina Resor</a>
+                            <a href="bokaresa.html">Boka Resa</a>
+                            <a href="minaresor.html">Avboka Resa</a>
+                            <a href="minaresor.html">Ändra Resa</a>
+                        </div>
+                    </div>
+                    <a href="om.html">Om Färdtjänst</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+                <!-- search icons / bar -->
+                <button class="search" aria-label="open search"><img src="img/search_black_24dp.svg" alt="Sök"></button>
+                <button class="close" aria-label="close search"><img src="img/close_white_24dp.svg"
+                        alt="Stäng"></button>
+                <!-- search bar  -->
+                <div class="search-padd">
+                    <label class="visually-hidden" for="search">Sök</label>
+                    <input aria-labelledby="search" class="search-bar" type="search" name="search" id="search" placeholder="Sök">
+                    <button class="searchclose close" aria-label="search"><img src="img/search_black_24dp.svg"
+                            alt="Sök"></button>
+                </div>
+            </nav>
+        </header>
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="minasidor.html">Mina Sidor</a>
+            <a href="minaresor.html">Mina Resor</a>
+            <a href="bokaresa.html">Boka Resa</a>
+            <a href="om.html">Om Färdtjänst</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <!-- main content -->
+        <main id="main">
+            <section class="mobilpadding">
+                <h1>Boka resa</h1>
+                <article class="text-styling">
+                    <p><strong>Fält markerade med * är obligatoriska och måste fyllas i.</strong></p>
+                    <!-- booking form -->
+                    <form class="boka" action="#">
+                        <fieldset>
+                            <legend class="formheading">Adress för upphämtning</legend>
+                            <!-- pickup part -->
+                            <label for="pickup-fav">Välj adress från favoritlistan:</label>
+                            <select name="pickup-fav" id="pickup-fav">
+                                <option value="choose">Välj från favorit adresser:</option>
+
+                                <option value="hemma">Hemma</option>
+                                <option value="biblioteket">Biblioteket</option>
+                            </select>
+                            <div class="bokagrid">
+                                <label class="labelgrid" for="pickup"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Adress:</label>
+                                <input class="labelgrid" type="text" name="pickup" id="pickup" placeholder="Storgatan 17">
+                                <label for="postnr" class="left"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Postnummer:</label>
+                                <label for="ort" class="right"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Ort:</label>
+                                <input type="text" id="postnr" class="left" placeholder="90443">
+                                <input type="text" id="ort" class="right" placeholder="Umeå">
+                            </div>
+                        </fieldset>
+                        <!-- destination part -->
+                        <fieldset>
+                            <legend class="formheading">Destination</legend>
+                            <label for="dropoff-fav">Välj adress från favoritlistan:</label>
+                            <select name="dropoff-fav" id="dropoff-fav">
+                                <option value="choose">Välj från favorit adresser:</option>
+                                <option value="hemma">Hemma</option>
+                                <option value="biblioteket">Biblioteket</option>
+                            </select>
+                            <div class="bokagrid">
+                                <label class="labelgrid" for="dropoff"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Adress:</label>
+                                <input class="labelgrid" type="text" name="dropoff" id="dropoff" placeholder="Bakgatan 54">
+                                <label for="postnrdest" class="left"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Postnummer:</label>
+                                <label for="ortdest" class="right"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Ort:</label>
+                                <input type="text" name="postnr" id="postnrdest" class="left" placeholder="90483">
+                                <input type="text" name="ort" id="ortdest" class="right" placeholder="Umeå">
+                            </div>
+                        </fieldset>
+                        <!-- time and date part -->
+                        <fieldset>
+                            <legend class="formheading"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Välj när du vill resa:</legend>
+                            <div class="radiogrid">
+                                <input class="radioinput snarast" type="checkbox" name="pickuptime" id="now" value="snarast" onclick="snarast()">
+                                <label class="radiolabel" for="now">Snarast</label>
+                            </div>
+                            <div class="snarastradio">
+                                <input class="radioinput " type="radio" name="pickuptime" id="avgang" value="avgång">
+                                <label class="radiolabel" for="avgang">Avgångstid</label>
+                                <input class="radioinput " type="radio" name="pickuptime" id="ankomst" value="ankomst">
+                                <label class="radiolabel" for="ankomst">Ankomstid</label>
+                            </div>
+                            <!-- hide if SNARAST is checked -->
+                            <div class="snarasthide">
+                                <div class="bokagrid">
+                                    <label class="left" for="tid"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Tid:</label>
+                                    <label class="right" for="datum"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Datum:</label>
+                                    <input class="left" type="time" name="tid" id="tid">
+                                    <input class="right" type="date" name="datum" id="datum">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- return trip part -->
+                        <fieldset>
+                            <legend class="formheading">Vill du boka en returresa?</legend>
+                            <div class="radiogrid">
+                                <input class="retur" type="checkbox" name="return" id="return" onclick="returntrip()">
+                                <label for="return">Ja</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="returresa">
+                            <!-- return pickup -->
+                            <fieldset>
+                                <legend class="formheading">Adress för upphämtning returresa:</legend>
+                                <label for="return-pickup-fav">Välj adress från favoritlistan:</label>
+                                <select name="pickup-fav" id="return-pickup-fav">
+                                    <option value="choose">Välj från favorit adresser:</option>
+
+                                    <option value="hemma">Hemma</option>
+                                    <option value="biblioteket">Biblioteket</option>
+                                </select>
+                                <div class="bokagrid">
+                                    <label class="labelgrid" for="return-pickup"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Adress:</label>
+                                    <input class="labelgrid" type="text" name="pickup" id="return-pickup" placeholder="Storgatan 17">
+                                    <label for="postnrreturn" class="left"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Postnummer:</label>
+                                    <label for="ortreturn" class="right"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Ort:</label>
+                                    <input type="text" id="postnrreturn" class="left" placeholder="90443">
+                                    <input type="text" id="ortreturn" class="right" placeholder="Umeå">
+                                </div>
+                            </fieldset>
+                            <!-- return destination -->
+                            <fieldset>
+                                <legend class="formheading">Destination:</legend>
+                                <label for="return-dropoff-fav">Välj adress från favoritlistan:</label>
+                                <select name="dropoff-fav" id="return-dropoff-fav">
+                                    <option value="choose">Välj från favorit adresser:</option>
+                                    <option value="hemma">Hemma</option>
+                                    <option value="biblioteket">Biblioteket</option>
+                                </select>
+                                <div class="bokagrid">
+                                    <label class="labelgrid" for="return-dropoff"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Adress:</label>
+                                    <input class="labelgrid" type="text" name="dropoff" id="return-dropoff" placeholder="Bakgatan 54">
+                                    <label for="postnrreturndest" class="left"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Postnummer:</label>
+                                    <label for="ortreturndest" class="right"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Ort:</label>
+                                    <input type="text" name="postnr" id="postnrreturndest" class="left" placeholder="90483">
+                                    <input type="text" name="ort" id="ortreturndest" class="right" placeholder="Umeå">
+                                </div>
+                            </fieldset>
+                            <!-- return time and date -->
+                            <fieldset>
+                                <legend class="formheading"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Välj när du vill resa:</legend>
+                                <div class="radiogrid">
+                                    <input class="radioinput" type="radio" name="pickuptime" id="return-avgang" value="avgång">
+                                    <label class="radiolabel" for="return-avgang">Avgångstid</label>
+                                    <input class="radioinput" type="radio" name="pickuptime" id="return-ankomst" value="ankomst">
+                                    <label class="radiolabel" for="return-ankomst">Ankomstid</label>
+                                </div>
+
+                                <div class="bokagrid">
+                                    <label class="left" for="return-tid"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Tid:</label>
+                                    <label class="right" for="return-datum"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Datum:</label>
+                                    <input class="left" type="time" name="tid" id="return-tid">
+                                    <input class="right" type="date" name="datum" id="return-datum">
+                                </div>
+
+                            </fieldset>
+                        </fieldset>
+                        <!-- extra alternatives -->
+                        <fieldset>
+                            <legend class="formheading">Tillval:</legend>
+                            <div class="radiogrid">
+                                <input type="checkbox" name="tillval" id="Rullstol">
+                                <label for="Rullstol">Rullstolsanpassad bil</label>
+                                <input type="checkbox" name="tillval" id="Hjälpmedel">
+                                <label for="Hjälpmedel">Hjälpmedel, till exempel rullator</label>
+                                <input type="checkbox" name="tillval" id="Husdjur">
+                                <label for="Husdjur">Husdjur</label>
+                                <input type="checkbox" name="tillval" id="Bagage">
+                                <label for="Bagage">Större bagage så som resväska</label>
+                            </div>
+                        </fieldset>
+                        <!-- number of passengers -->
+                        <fieldset>
+                            <legend class="formheading">Passagerare</legend>
+                            <label class="formheading" for="antal"><img src="img/ast.svg" alt="Obligatoriskt fält" height="12" width="12"> Antal resenärer:</label>
+                            <input type="number" name="antal" id="antal">
+                        </fieldset>
+                        <!-- reaccuring trip -->
+                        <fieldset>
+                            <legend class="formheading">Vill du boka en återkommande resa?</legend>
+                            <div class="radiogrid">
+                                <input type="checkbox" name="recurring" id="recurr" onclick="recurringtrip()">
+                                <label for="recurr">Ja</label>
+                            </div>
+                            <div class="recurring">
+                                <div class="radiogrid">
+                                    <input class="radioinput" type="radio" value="everyday" id="everyday" name="recurring">
+                                    <label for="everyday">Varje vardag</label>
+                                    <input class="radioinput" type="radio" value="weekly" id="weekly" name="recurring">
+                                    <label for="weekly">Varje vecka</label>
+                                    <input class="radioinput" type="radio" value="monthly" id="monthly" name="recurring">
+                                    <label for="monthly">En gång i månaden</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- comments -->
+                        <fieldset>
+                            <legend class="formheading">Lämna eventuell kommentar till föraren</legend>
+                            <label class="formheading" for="kommentar">Kommentar:</label>
+                            <textarea name="kommentar" id="kommentar" cols="30" rows="10"></textarea>
+                        </fieldset>
+
+                        <!-- booking button -->
+                        <div class="bokaknapp">
+                            <a href="bekraftelse.html" class="boka-link ">
+                                <p class="boka-link-text">Boka</p>
+                            </a>
+                        </div>
+                    </form>
+
+                </article>
+
+
+
+            </section>
+        </main>
+        <!-- footer with contact, GDPR and accessability -->
+        <footer>
+            <div class="footergrid">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="tillganglighet.html">Tillgänglighetsredogörelse</a>
+                <a href="gdpr.html">Personuppgifter - GDPR</a>
+                <p class="footercenter"><a href="https://fonts.google.com/icons">Ikoner från Google Material Icons</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

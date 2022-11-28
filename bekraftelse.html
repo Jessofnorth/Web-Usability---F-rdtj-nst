@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- faviconer -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Färdtjänst i Umeå kommun</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <!-- skip to main content, only visible when in focus -->
+            <a class="skip-nav" href="#main">Till huvudinnehållet</a>
+            <nav>
+                <!-- nav hamburger button -->
+                <button name="meny" class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/Logotyp.svg" alt="Färdtjänst i Umeå kommun logotyp"></a>
+                <div class="menu">
+
+                    <!-- desktop menu -->
+                    <a href="minasidor.html">Mina Sidor</a>
+                    <div class="dropdownbtn">
+                        <button class="menubtn">Resor<img class="menuopen" aria-label="dropdown-menu" src="img/expand_more_white_24dp.svg"
+                            alt="Resor">
+                    </button>
+                        <!-- menu dropdown -->
+                        <div class="dropdown">
+                            <a href="minaresor.html">Mina Resor</a>
+                            <a href="bokaresa.html">Boka Resa</a>
+                            <a href="minaresor.html">Avboka Resa</a>
+                            <a href="minaresor.html">Ändra Resa</a>
+                        </div>
+                    </div>
+                    <a href="om.html">Om Färdtjänst</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+                <!-- search button / bar -->
+                <!-- search icon and X icon  -->
+                <button class="search" aria-label="open search"><img src="img/search_black_24dp.svg" alt="Sök"></button>
+                <button class="close" aria-label="close search"><img src="img/close_white_24dp.svg"
+                        alt="Stäng"></button>
+                <!-- search bar -->
+                <div class="search-padd">
+                    <label class="visually-hidden" for="search">Sök</label>
+                    <input aria-labelledby="search" class="search-bar" type="search" name="search" id="search" placeholder="Sök">
+                    <button class="searchclose close" aria-label="search"><img src="img/search_black_24dp.svg"
+                            alt="Sök"></button>
+                </div>
+            </nav>
+        </header>
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="minasidor.html">Mina Sidor</a>
+            <a href="minaresor.html">Mina Resor</a>
+            <a href="bokaresa.html">Boka Resa</a>
+            <a href="om.html">Om Färdtjänst</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <!-- main content -->
+        <main id="main">
+            <section class="mobilpadding">
+                <!-- longer title with wordbreak for smaller screens. in a good place in the word -->
+                <h1>Boknings&shy;bekräftelse</h1>
+                <article class="text-styling ">
+                    <p class="center boldmargin">Din resa är nu bokad!</p>
+                    <p class="center boldmargin">En bekreftelse skickas till dig via sms och e-post.</p>
+                    <img class="bokningsbekraftelse" src="img/event_available_black_24dp.svg" alt="Calendar icon">
+                    <!-- booking details -->
+                    <p class="boldmargin">Datum:</p>
+                    <p>23 December 2021</p>
+                    <p class="boldmargin">Adress för upphämtning:</p>
+                    <p>Storgatan 17, 90443 Umeå</p>
+                    <p class="boldmargin">Destination:</p>
+                    <p>Bakgatan 54, 90483 Umeå</p>
+                    <p class="boldmargin">Avgångstid:</p>
+                    <p>12:35</p>
+                    <p class="boldmargin">Antal resenärer:</p>
+                    <p>2</p>
+                </article>
+                <article class="top-margin">
+                    <a class="knapp-ikon" href="minasidor.html">
+                        <img src="img/person_black_24dp.svg" alt="User icon">
+                        <p>Mina Sidor</p>
+                    </a>
+                </article>
+                <article class="top-margin">
+                    <a class="knapp-ikon" href="minaresor.html">
+                        <img src="img/calendar_month_black_24dp.svg" alt="My bookings icon">
+                        <p>Mina Resor</p>
+                    </a>
+
+                </article>
+            </section>
+        </main>
+        <!-- footer with contact, GDPR and accessability -->
+        <footer>
+            <div class="footergrid">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="tillganglighet.html">Tillgänglighetsredogörelse</a>
+                <a href="gdpr.html">Personuppgifter - GDPR</a>
+                <p class="footercenter"><a href="https://fonts.google.com/icons">Ikoner från Google Material Icons</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

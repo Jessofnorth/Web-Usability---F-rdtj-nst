@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- faviconer -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Färdtjänst i Umeå kommun</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <!-- skip to main content, only visible when in focus -->
+            <a class="skip-nav" href="#main">Till huvudinnehållet</a>
+            <nav>
+                <!-- nav hamburger button -->
+                <button name="meny" class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/Logotyp.svg" alt="Färdtjänst i Umeå kommun logotyp"></a>
+                <div class="menu">
+
+                    <!-- desktop menu -->
+                    <a href="minasidor.html">Mina Sidor</a>
+                    <div class="dropdownbtn">
+                        <button class="menubtn">Resor<img class="menuopen" aria-label="dropdown-menu" src="img/expand_more_white_24dp.svg"
+                            alt="Resor">
+                    </button>
+                        <!-- dropdown menu -->
+                        <div class="dropdown">
+                            <a href="minaresor.html">Mina Resor</a>
+                            <a href="bokaresa.html">Boka Resa</a>
+                            <a href="minaresor.html">Avboka Resa</a>
+                            <a href="minaresor.html">Ändra Resa</a>
+                        </div>
+                    </div>
+                    <a href="om.html">Om Färdtjänst</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+                <!-- search icon / bar -->
+                <button class="search" aria-label="open search"><img src="img/search_black_24dp.svg" alt="Sök"></button>
+                <button class="close" aria-label="close search"><img src="img/close_white_24dp.svg"
+                        alt="Stäng"></button>
+                <!-- search bar -->
+                <div class="search-padd">
+                    <label class="visually-hidden" for="search">Sök</label>
+                    <input aria-labelledby="search" class="search-bar" type="search" name="search" id="search" placeholder="Sök">
+                    <button class="searchclose close" aria-label="search"><img src="img/search_black_24dp.svg"
+                            alt="Sök"></button>
+                </div>
+            </nav>
+        </header>
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="minasidor.html">Mina Sidor</a>
+            <a href="minaresor.html">Mina Resor</a>
+            <a href="bokaresa.html">Boka Resa</a>
+            <a href="om.html">Om Färdtjänst</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <!-- main content -->
+        <main id="main">
+            <section class="mobilpadding">
+                <h1>Om färdtjänst</h1>
+                <!-- article with sections -->
+                <article class="text-styling">
+                    <section>
+                        <h2>Vad är färdtjänst?</h2>
+                        <p>Färdtjänst är en anpassad form av kollektivtrafik som finns till för dig som har särskilda behov och inte klarar att resa med våra bussar och tåg. Precis som i den övriga kollektivtrafiken reser du tillsammans med andra men resorna
+                            sker i personbil eller fordon med rullstolsplats. Precis som i den övriga kollektivtrafiken kan resan ta längre tid än om du reser med eget fordon.
+                        </p>
+                        <p>Du måste ha ett tillstånd för att få åka med färdtjänst och det söker du hos kommunen. För att bli beviljad tillståndet ska du ha allvarliga svårigheter att förflytta dig på egen hand eller att resa med allmänna kommunikationer.
+                            Din funktionsvariation ska vara varaktig minst tre månader. Du måste vara folkbokförd i Umeå kommun.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Regler</h2>
+                        <p>Färdtjänst prövas efter ditt behov och är till för dig som har väsentliga svårigheter att förflytta dig på egen hand eller att resa i allmänna kommunikationer. Din funktions¬nedsättning måste vara varaktig i minst tre månader.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Ansökan </h2>
+                        <p>Blankett för ansökan kan fyllas i digitalt med bank-ID (se länk nedan). Du kan även skriva ut blanketten själv och skicka med post. Besök ditt bibliotek eller stadshusets reception om du behöver hjälp med utskrift. Kontakta Tillståndsenheten
+                            via e-post eller telefon om du önskar få blanketten hemskickad med brevpost.
+                        </p>
+                        <p>Sänd brevpost till Tillståndsenheten för färdtjänst, 901 84 Umeå</p>
+                        <p>Skicka in din ansökan tillsammans med handlingar som styrker hur din funktions-nedsättning påverkar din förmåga att förflytta dig till hållplats eller att resa i buss och tåg (allmänna kommunikationer). Har du haft färdtjänst i
+                            en annan kommun kan du i första hand begära ut den utredningen för att bifoga till din ansökan.
+                        </p>
+
+                        <p>Du måste ha ett tillstånd för att få åka med färdtjänst och det söker du hos kommunen. För att bli beviljad tillståndet ska du ha allvarliga svårigheter att förflytta dig på egen hand eller att resa med allmänna kommunikationer.
+                            Din funktionsvariation ska vara varaktig minst tre månader. Du måste vara folkbokförd i Umeå kommun.
+                        </p>
+                        <a href="https://e.umea.se/behov-av-hjalp-och-stod-ansokan-kommunal-fardtjanst">Ansök om
+                            färdtjänsttillstånd hos Umeå kommun här.
+                        </a>
+                    </section>
+                    <section>
+                        <h2>Hur det fungerar
+                        </h2>
+                        <p>Du som har beviljats kommunal färdtjänst får resa obegränsat antal resor inom Umeå kommun dygnet runt. Du måste själv hålla reda på när ditt färdtjänsttillstånd går ut. Om din funktionsnedsättning kvarstår kan du ansöka om ett
+                            nytt tillstånd minst en månad före utgångsdatum.</p>
+                        <h3>Att boka</h3>
+                        <p>Färdtjänst ska beställas minst en timme före önskad avresa. Beställ på telefonnummer 090-13 40 60.</p>
+                        <h3>Att boka färdtjänst med rullstolsplats</h3>
+                        <p>Resa i fordon med rullstolsplats mellan klockan 06.00 och 00.00 ska förbeställas senast klockan 18.00 dagen före. Resa i fordon med rullstolsplats klockan 00.00–06.00 ska beställas senast klockan 14.00 vardagen före. Beställ på
+                            telefon-nummer 090-77 25 70 eller via denna webbplats. </p>
+                        <h3>Avbokningar</h3>
+                        <p>Färdtjänstfordonet väntar fem (5) minuter från överenskommen tid vid den bokade hämtadressen. Se till att vara startklar vid ytterporten på överenskommen upphämtningstid. </p>
+                        <p>Kom ihåg att avbeställa inställd resa i god tid, senast en (1) timme innan, för att undvika att det blir en bomresa (transportören fakturerar resenär kostnad för bomresa i efter hand).
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Läs mer</h2>
+                        <p>Ovan information är hämtad från Umeå kommuns webbplats. </p>
+                        <p>Om du vill läsa mer om färdtjänst så besök <a href="https://www.umea.se/omsorgochhjalp/resortransporterochbesok/fardtjanst.4.7d7d901172bb372c5d542.html">Umeå
+                                kommuns webbplats här</a>. </p>
+                        <h3>Källor för ovan text: </h3>
+                        <ul>
+                            <li><a href="https://www.umea.se/omsorgochhjalp/resortransporterochbesok/fardtjanst.4.7d7d901172bb372c5d542.html ">https://www.umea.se/omsorgochhjalp/resortransporterochbesok/fardtjanst.4.7d7d901172bb372c5d542.html
+                                </a></li>
+                            <li><a href="https://e.umea.se/behov-av-hjalp-och-stod-ansokan-kommunal-fardtjanst ">https://e.umea.se/behov-av-hjalp-och-stod-ansokan-kommunal-fardtjanst
+                                </a></li>
+                            <li><a href="https://www.umea.se/omsorgochhjalp/resortransporterochbesok/fardtjanst/ansokomfardtjanst.4.1c16b00a1742340e02efd6.html">https://www.umea.se/omsorgochhjalp/resortransporterochbesok/fardtjanst/ansokomfardtjanst.4.1c16b00a1742340e02efd6.html</a>
+                            </li>
+                            <li><a href="https://www.umea.se/omsorgochhjalp/resortransporterochbesok/fardtjanst/bokafardtjanstresor.4.1c16b00a1742340e02e1022.html">https://www.umea.se/omsorgochhjalp/resortransporterochbesok/fardtjanst/bokafardtjanstresor.4.1c16b00a1742340e02e1022.html</a>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+            </section>
+        </main>
+        <!-- footer with contact, GDPR and accessability -->
+        <footer>
+            <div class="footergrid">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="tillganglighet.html">Tillgänglighetsredogörelse</a>
+                <a href="gdpr.html">Personuppgifter - GDPR</a>
+                <p class="footercenter"><a href="https://fonts.google.com/icons">Ikoner från Google Material Icons</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,896 @@
+        /* GENERAL STYLING
+        setting border-box for eisier styling
+        styling wrapper for containing a max width
+
+        and extra padding for specific sections
+        layout done with grids*/
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-size: 1em;
+            background-color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .wrapper {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: 1fr auto;
+            min-height: 100vh;
+            padding-top: 5em;
+            position: relative;
+        }
+        /* skip to main content, only visible when in focus */
+        
+        .skip-nav {
+            position: absolute;
+            transform: translateY(-120%);
+            background-color: #e9e9e9;
+            padding: 1em;
+        }
+        
+        .skip-nav:focus {
+            position: absolute;
+            transform: translateY(0);
+            transition: transform 325ms ease-in;
+        }
+        
+        main {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .mobilpadding {
+            padding: 1em;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .top-margin {
+            margin-top: 2em;
+        }
+        /* Text styling with fonts, some sizes and colors */
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin: .2em;
+            margin-bottom: 1em;
+        }
+        
+        a {
+            color: #006E1E;
+        }
+        
+        .error {
+            color: red;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .bold {
+            font-weight: 700;
+            padding-top: 1em;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        textarea {
+            width: 100%;
+        }
+        
+        .hide {
+            display: none;
+        }
+        /* input field change background color to light grey when in focus. */
+        
+        input:focus {
+            background-color: #d9d9d9;
+        }
+        /* NAVIGATION - header with mobile/desktop nav with search. In mobile a hamburger button with slide out menu. 
+In desktop a regular menu with dropdown. 
+made with grid*/
+        
+        header {
+            position: fixed;
+            top: 0;
+            height: auto;
+            width: 100%;
+            background-color: white;
+            z-index: 99;
+            background-color: #006E1E;
+            height: 5em;
+        }
+        
+        nav {
+            display: grid;
+            grid-template-columns: 15% 70% 15%;
+            height: 4em;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 1em;
+        }
+        /* logo styling  */
+        
+        .logo {
+            height: 3em;
+            place-self: center;
+            text-decoration: none;
+        }
+        /* search ikon that showes search bar on click */
+        
+        .search {
+            background-color: transparent;
+            border: none;
+            grid-column: 3/4;
+            grid-row: 1;
+            display: block;
+        }
+        
+        .search.is-active {
+            display: none;
+        }
+        
+        .close {
+            grid-column: 3/4;
+            grid-row: 1;
+            background-color: transparent;
+            border: none;
+            display: none;
+        }
+        
+        .close.is-active {
+            background-color: transparent;
+            border: none;
+            display: block;
+        }
+        
+        .search img {
+            height: 2em;
+            width: auto;
+        }
+        
+        .close img {
+            height: 2em;
+            width: auto;
+        }
+        
+        .search-padd {
+            background-color: #006E1E;
+            grid-column: 1/4;
+            padding: .5em;
+            width: 100%;
+            max-width: 500px;
+            margin-top: 4em;
+            justify-self: end;
+            position: absolute;
+            display: none;
+        }
+        
+        .search-bar {
+            padding: 1em;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .search-padd.is-active {
+            display: grid;
+            grid-template-columns: 85% 15%;
+        }
+        
+        .searchclose {
+            background-color: transparent;
+            border: solid .1em #e9e9e9;
+            display: none;
+        }
+        
+        .searchclose.is-active {
+            display: block;
+            grid-column: 2;
+        }
+        /* to hide the search label, but it keeps its accessability */
+        
+        .visually-hidden {
+            border-width: 0 !important;
+            clip: rect(1px, 1px, 1px, 1px) !important;
+            height: 1px !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            position: absolute !important;
+            white-space: nowrap !important;
+            width: 1px !important;
+        }
+        /* Hamburger icon + animation */
+        
+        .hamburger {
+            position: relative;
+            display: block;
+            width: 33px;
+            appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+            place-self: center;
+        }
+        
+        .hamburger .bar,
+        .hamburger::after,
+        .hamburger::before {
+            width: 100%;
+            content: "";
+            display: block;
+            height: 4px;
+            background-color: #e9e9e9;
+            margin: 3px 0px;
+            transition: 0.4s;
+            border-radius: 99px;
+        }
+        /* animation of hamburger, rotate 2 bars and hide one */
+        
+        .hamburger.is-active::before {
+            transform: rotate(-45deg) translate(-2px, 6px);
+        }
+        
+        .hamburger.is-active::after {
+            transform: rotate(45deg) translate(-3px, -8px);
+        }
+        
+        .hamburger.is-active .bar {
+            opacity: 0;
+        }
+        /* drop-down part of mobile-nav 
+is out of sight until hamburger is clicked
+placed under the navbar so hamburger is still clickable */
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: 100%;
+            height: 100%;
+            width: 100%;
+            display: block;
+            z-index: 98;
+            background-color: #006E1E;
+            transition: 0.4s;
+            padding-top: 6em;
+        }
+        
+        .mobile-nav.is-active {
+            right: 0;
+        }
+        
+        .mobile-nav a {
+            font-family: 'Anton', sans-serif;
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 3%;
+            color: #e9e9e9;
+            font-size: 2.5em;
+            line-height: 2em;
+            font-weight: 700;
+            letter-spacing: .08em;
+        }
+        /* Hide desktop menu in mobile view */
+        
+        .menu {
+            display: none;
+        }
+        
+        .menu a {
+            color: #e9e9e9;
+            padding: 1% 3%;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin: 1%;
+            font-weight: 700;
+            place-self: center;
+        }
+        
+        .menu a:hover,
+        a:active {
+            text-decoration: underline;
+        }
+        /* Linkbuttons - links syled as buttons, with grids */
+        
+        .knapp-ikon {
+            background-color: #006E1E;
+            color: #e9e9e9;
+            border-radius: 25px;
+            display: grid;
+            grid-template-columns: 25% 75%;
+            height: 6em;
+            text-decoration: none;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            letter-spacing: .08em;
+        }
+        
+        .knapp-ikon img {
+            height: 4em;
+            width: auto;
+            justify-self: end;
+            align-self: center;
+        }
+        
+        .knapp-ikon p {
+            font-family: 'Anton', sans-serif;
+            place-self: center;
+            font-size: 2.5em;
+        }
+        
+        .mindre p {
+            font-size: 1.7em;
+            letter-spacing: .08em;
+        }
+        
+        .startinfo {
+            line-height: 1.5em;
+            width: 100%;
+            max-width: 300px;
+            margin: .5em auto 0;
+        }
+        /* Text styling for bigger textsections */
+        
+        .text-styling {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .text-styling h2 {
+            font-size: 1.5em;
+            text-align: left;
+            margin: 3em auto 1em auto;
+        }
+        
+        .text-styling h3 {
+            font-size: 1.2em;
+            text-align: left;
+            margin: 2em auto .5em auto;
+        }
+        
+        .text-styling p {
+            margin: 1em auto 2em auto;
+            line-height: 1.5em;
+        }
+        
+        .text-styling ul {
+            margin: 1em;
+        }
+        
+        .text-styling li {
+            padding: .5em;
+        }
+        
+        .text-styling li a {
+            word-break: break-all;
+        }
+        
+        .break {
+            word-break: break-all;
+        }
+        
+        .minasidor p {
+            margin: .5em;
+        }
+        /* kontact form styling  */
+        
+        .kontaktform {
+            border: #006E1E .3em solid;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .kontaktform legend {
+            font-weight: 700;
+            padding: .5em;
+        }
+        
+        .kontaktform label {
+            padding: .5em 0;
+        }
+        
+        .kontaktform input {
+            padding: .5em;
+        }
+        /* button styled the same as links styled as buttons */
+        
+        .kontaktform input[type=submit] {
+            background-color: #006E1E;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.5em;
+            letter-spacing: .08em;
+            color: #e9e9e9;
+            border-radius: 25px;
+            margin: 1em 0;
+            padding: .5em;
+            border: none;
+            width: 8em;
+            justify-self: end;
+        }
+        /* radio and checkboxes bigger sizes for accessability */
+        
+        input[type=radio].radioinput,
+        input[type=checkbox] {
+            width: 1.5em;
+            height: 1.5em;
+        }
+        /* login form  */
+        
+        .loginform {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .loginform label {
+            padding: .5em;
+        }
+        
+        .loginform input {
+            padding: .5em;
+        }
+        
+        .knapp-link {
+            background-color: #006E1E;
+            color: #e9e9e9;
+            border-radius: 25px;
+            height: 3em;
+            text-decoration: none;
+            width: 100%;
+            max-width: 200px;
+            margin: 1em;
+            display: grid;
+            grid-template-columns: 1fr;
+            place-self: center;
+        }
+        
+        .knapp-link p {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.5em;
+            letter-spacing: .08em;
+            place-self: center;
+        }
+        /* paragraph that looks like a link, lika forgot password. not clickable  */
+        
+        p.fakelink {
+            color: black;
+            text-align: center;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            text-decoration: underline;
+        }
+        /* favorite adresses*/
+        
+        .favorit {
+            border: 3px solid #006E1E;
+            margin: 2em 0;
+            padding: .5em;
+            display: grid;
+            grid-template-columns: 90% 10%;
+        }
+        
+        .favorit h2 {
+            font-size: 1em;
+            text-align: left;
+        }
+        
+        .favorit p {
+            grid-column: 1/2
+        }
+        
+        .favorit img {
+            grid-column: 2/3;
+            grid-row: 1/3;
+            justify-self: center;
+            align-self: center;
+            width: 3em;
+            height: auto;
+        }
+        
+        .lagg-till-fav {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 40% 60%;
+            margin-bottom: 1em;
+        }
+        
+        .lagg-till-fav label {
+            padding: .5em;
+            grid-column: 1/3;
+        }
+        
+        .lagg-till-fav input {
+            padding: .5em;
+            grid-column: 1/3;
+            margin-bottom: 1em;
+        }
+        
+        input.left,
+        label.left {
+            grid-column: 1/2;
+            width: 100%;
+        }
+        
+        input.right,
+        label.right {
+            grid-column: 2/3;
+            width: 100%;
+            margin-left: .5em;
+        }
+        /* button styling */
+        
+        .lagg-till-fav input[type=submit] {
+            background-color: #006E1E;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.5em;
+            letter-spacing: .08em;
+            color: #e9e9e9;
+            border-radius: 25px;
+            margin: 1em 0;
+            padding: .5em;
+            border: none;
+            width: 8em;
+            justify-self: end;
+        }
+        /* booking form */
+        
+        .boka {
+            display: block;
+            position: relative;
+            width: 100%
+        }
+        
+        .boka fieldset {
+            border: none;
+            margin-bottom: 2em;
+        }
+        
+        .formheading {
+            font-weight: 700;
+            text-align: left;
+            font-size: 1em;
+            display: block;
+        }
+        
+        .boka select {
+            width: 100%;
+            margin: 1em 0;
+            display: block;
+        }
+        
+        .boka input {
+            width: 100%;
+            padding: .5em;
+            place-self: center;
+            display: block;
+        }
+        
+        .boka label {
+            padding: .5em 0;
+        }
+        
+        .bokagrid {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            margin-top: 1em;
+        }
+        
+        label.labelgrid,
+        input.labelgrid {
+            grid-column: 1/3;
+        }
+        
+        .radiogrid,
+        .snarastradio {
+            display: grid;
+            grid-template-columns: 10% 90%;
+            gap: 1em;
+            margin-top: 1em;
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        
+        label.radiogrid {
+            place-self: center;
+        }
+        
+        .bokaknapp {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        /* link styled as button */
+        
+        .boka-link {
+            background-color: #006E1E;
+            color: #e9e9e9;
+            border-radius: 25px;
+            height: 3em;
+            text-decoration: none;
+            width: 100%;
+            max-width: 200px;
+            margin: 1em 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-self: end;
+        }
+        
+        p.boka-link-text {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.5em;
+            letter-spacing: .08em;
+            place-self: center;
+            margin: 0;
+        }
+        
+        .bokningsbekraftelse {
+            width: 10em;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        p.boldmargin {
+            font-weight: 700;
+            margin: .5em 0;
+        }
+        /* my bookings */
+        
+        .minaresor {
+            border: 3px solid #006E1E;
+            margin: 2em 0;
+            padding: .5em;
+            display: grid;
+            grid-template-columns: 80% 20%;
+        }
+        
+        .minaresor h2 {
+            font-size: 1em;
+            text-align: left;
+        }
+        
+        .minaresor p {
+            grid-column: 1/2
+        }
+        
+        .minaresor a {
+            text-align: center;
+            color: black;
+        }
+        
+        a.edit {
+            grid-column: 2/3;
+            grid-row: 1/4;
+            place-self: center;
+            width: auto;
+            height: 3em;
+            padding: .5em;
+        }
+        
+        .delete {
+            grid-column: 2/3;
+            grid-row: 5/11;
+            place-self: center;
+            width: auto;
+            height: 3em;
+            padding: .5em;
+        }
+        /* Show/hide sections in booking form */
+        
+        .returresa {
+            display: none;
+        }
+        
+        .returresa.is-active {
+            display: block;
+        }
+        
+        .snarastradio.is-active {
+            display: none;
+        }
+        
+        .snarasthide {
+            display: block;
+        }
+        
+        .snarasthide.is-active {
+            display: none;
+        }
+        
+        .recurring {
+            display: none;
+        }
+        
+        .recurring.is-active {
+            display: block;
+        }
+        /* footer */
+        
+        footer {
+            width: 100%;
+            background-color: #006E1E;
+            padding-bottom: 1em;
+        }
+        
+        .footergrid {
+            display: grid;
+            grid-template-columns: 100%;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        footer a {
+            width: 100%;
+            padding: .5em;
+            text-align: center;
+            color: #e9e9e9;
+        }
+        
+        footer p {
+            color: #e9e9e9;
+            font-size: .8em;
+            text-align: center;
+            padding: .5em;
+        }
+        /* media query for 1080px, adds number of colums and adapts the header/nav to desktop version. */
+        
+        @media (min-width: 1080px) {
+            /* MENU */
+            .mobile-nav {
+                display: none;
+            }
+            .hamburger {
+                display: none;
+            }
+            header {
+                height: 7em;
+            }
+            /* showing desktop menu */
+            nav {
+                grid-template-columns: 20% 75% 5%;
+                height: 7em;
+                width: 100%;
+                max-width: 1200px;
+            }
+            .logo {
+                height: 4em;
+                width: auto;
+                align-self: center;
+                justify-self: start;
+                padding-left: .5em
+            }
+            .menu {
+                display: grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                align-self: center;
+                text-align: center;
+                width: 100%;
+                max-width: 1200px;
+                padding: 1em;
+                height: 6em;
+            }
+            .menu a {
+                font-size: 1.5rem;
+            }
+            .search-padd {
+                width: 100%;
+                max-width: 500px;
+                margin-top: 6em;
+            }
+            .search-bar {
+                padding: 1em;
+                width: 100%;
+                max-width: 500px;
+            }
+            .dropdownbtn {
+                width: 100%;
+                place-self: center;
+                z-index: 99;
+            }
+            .menubtn {
+                background-color: #006E1E;
+                color: #e9e9e9;
+                padding: 1% 3%;
+                font-size: 1.5rem;
+                text-decoration: none;
+                margin: 1%;
+                font-weight: 700;
+                border: none;
+            }
+            .menuopen {
+                height: 1.2em;
+                float: right
+            }
+            .menubtn:hover {
+                text-decoration: underline;
+            }
+            .dropdown {
+                background-color: #006E1E;
+                color: #e9e9e9;
+                font-size: 1.5rem;
+                text-decoration: none;
+                font-weight: 700;
+                width: 100%;
+                max-width: 200px;
+                display: none;
+            }
+            .dropdown a {
+                padding: .5em 0;
+                line-height: 3em;
+                width: 100%;
+            }
+            .dropdown.is-active {
+                display: block;
+                position: absolute;
+                top: 4em;
+            }
+            /* Main content layout*/
+            .mobilpadding {
+                padding-top: 3em;
+                max-width: 1200px;
+                width: 100%;
+            }
+            .desktopgrid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                width: 100%;
+                max-width: 1200px;
+                place-self: center;
+            }
+            .boka,
+            .loginform,
+            .text-styling,
+            .kontaktform,
+            .minaresor {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                height: auto;
+            }
+            .lagg-till-fav,
+            .favorit {
+                margin: 2em auto;
+                width: 100%;
+                max-width: 600px;
+                height: auto;
+            }
+            .minasidor {
+                grid-row: 1/3;
+            }
+            .col2 {
+                grid-column: 2;
+            }
+            .col3 {
+                grid-column: 3;
+            }
+            .footergrid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .footercenter {
+                grid-column: 2;
+            }
+        }

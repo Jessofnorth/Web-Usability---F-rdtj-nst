@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- faviconer -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Färdtjänst i Umeå kommun</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <!-- skip to main content, only visible when in focus -->
+            <a class="skip-nav" href="#main">Till huvudinnehållet</a>
+            <nav>
+                <!-- nav hamburger button -->
+                <button name="meny" class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/Logotyp.svg" alt="Färdtjänst i Umeå kommun logotyp"></a>
+                <div class="menu">
+
+                    <!-- desktop menu -->
+                    <a href="minasidor.html">Mina Sidor</a>
+                    <div class="dropdownbtn">
+                        <button class="menubtn">Resor<img class="menuopen" aria-label="dropdown-menu" src="img/expand_more_white_24dp.svg"
+                            alt="Resor">
+                    </button>
+                        <!-- dropdown menu -->
+                        <div class="dropdown">
+                            <a href="minaresor.html">Mina Resor</a>
+                            <a href="bokaresa.html">Boka Resa</a>
+                            <a href="minaresor.html">Avboka Resa</a>
+                            <a href="minaresor.html">Ändra Resa</a>
+                        </div>
+                    </div>
+                    <a href="om.html">Om Färdtjänst</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+                <!-- search icon / bar -->
+                <button class="search" aria-label="open search"><img src="img/search_black_24dp.svg" alt="Sök"></button>
+                <button class="close" aria-label="close search"><img src="img/close_white_24dp.svg"
+                        alt="Stäng"></button>
+                <!-- search bar -->
+                <div class="search-padd">
+                    <label class="visually-hidden" for="search">Sök</label>
+                    <input aria-labelledby="search" class="search-bar" type="search" name="search" id="search" placeholder="Sök">
+                    <button class="searchclose close" aria-label="search"><img src="img/search_black_24dp.svg"
+                            alt="Sök"></button>
+                </div>
+            </nav>
+        </header>
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="minasidor.html">Mina Sidor</a>
+            <a href="minaresor.html">Mina Resor</a>
+            <a href="bokaresa.html">Boka Resa</a>
+            <a href="om.html">Om Färdtjänst</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <!-- main content -->
+        <main id="main">
+            <section class="mobilpadding">
+                <h1>Personuppgifter - GDPR</h1>
+                <!-- text article in sections -->
+                <article class="text-styling">
+                    <section>
+                        <h2>Hur behandlar vi dina personuppgifter?</h2>
+                        <p>Dataskyddsförordningen, GDPR, gäller som lag i alla EU:s medlemsländer. Förordningen innebär en hel del förändringar för dem som behandlar personuppgifter och stärkta rättigheter för den enskilde när det gäller personlig integritet.</p>
+                    </section>
+                    <section>
+                        <h2>Dataskyddsförordningen innebär förenklat att</h2>
+                        <ul>
+                            <li>Man bara får bara samla in personuppgifter om det finns ett tydligt syfte och om man uppfyller kraven i lagen.</li>
+                            <li>Uppgifter som samlas in måste vara nödvändiga.</li>
+                            <li>När syftet med personuppgiftsbehandlingen är uppnått ska uppgifterna tas bort.</li>
+                            <li>Man måste kunna visa att man har de rutiner som krävs för en korrekt hantering.</li>
+                        </ul>
+                        <p>I korthet kan man säga att alla personer vars personuppgifter behandlas har ett antal rättigheter enligt dataskyddsförordningen (GDPR). Rättigheter innebär bland annat att man som registrerad ska kunna få information om när och
+                            hur personuppgifterna behandlas och att man ska ha kontroll över sina egna uppgifter.</p>
+                    </section>
+                    <section>
+                        <h2>Läs mer på Umeå kommuns webbplats om hur vi hanterar dina personuppgifter </h2>
+                        <a class="break" href="https://www.umea.se/kommunochpolitik/overklagabeslutrattssakerhet/personuppgifterochdataskydd.4.533ba3d3171b940e90064c.html ">https://www.umea.se/kommunochpolitik/overklagabeslutrattssakerhet/personuppgifterochdataskydd.4.533ba3d3171b940e90064c.html </a>
+                    </section>
+
+
+                </article>
+
+            </section>
+        </main>
+        <!-- footer with contact, GDPR and accessability -->
+        <footer>
+            <div class="footergrid">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="tillganglighet.html">Tillgänglighetsredogörelse</a>
+                <a href="gdpr.html">Personuppgifter - GDPR</a>
+                <p class="footercenter"><a href="https://fonts.google.com/icons">Ikoner från Google Material Icons</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

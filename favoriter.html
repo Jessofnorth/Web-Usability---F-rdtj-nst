@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- faviconer -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Färdtjänst i Umeå kommun</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <!-- skip to main content, only visible when in focus -->
+            <a class="skip-nav" href="#main">Till huvudinnehållet</a>
+            <nav>
+                <!-- nav hamburger button -->
+                <button name="meny" class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/Logotyp.svg" alt="Färdtjänst i Umeå kommun logotyp"></a>
+                <div class="menu">
+
+                    <!-- desktop menu -->
+                    <a href="minasidor.html">Mina Sidor</a>
+                    <div class="dropdownbtn">
+                        <button class="menubtn">Resor<img class="menuopen" aria-label="dropdown-menu" src="img/expand_more_white_24dp.svg"
+                            alt="Resor">
+                    </button>
+                        <!-- dropdown menu -->
+                        <div class="dropdown">
+                            <a href="minaresor.html">Mina Resor</a>
+                            <a href="bokaresa.html">Boka Resa</a>
+                            <a href="minaresor.html">Avboka Resa</a>
+                            <a href="minaresor.html">Ändra Resa</a>
+                        </div>
+                    </div>
+                    <a href="om.html">Om Färdtjänst</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+                <!-- search ivon / bar -->
+                <button class="search" aria-label="open search"><img src="img/search_black_24dp.svg" alt="Sök"></button>
+                <button class="close" aria-label="close search"><img src="img/close_white_24dp.svg"
+                        alt="Stäng"></button>
+                <!-- search bar -->
+                <div class="search-padd">
+                    <label class="visually-hidden" for="search">Sök</label>
+                    <input aria-labelledby="search" class="search-bar" type="search" name="search" id="search" placeholder="Sök">
+                    <button class="searchclose close" aria-label="search"><img src="img/search_black_24dp.svg"
+                            alt="Sök"></button>
+                </div>
+            </nav>
+        </header>
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="minasidor.html">Mina Sidor</a>
+            <a href="minaresor.html">Mina Resor</a>
+            <a href="bokaresa.html">Boka Resa</a>
+            <a href="om.html">Om Färdtjänst</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <!-- main content -->
+        <main id="main">
+            <section class="mobilpadding">
+                <h1>Favorit Adresser</h1>
+                <article class="text-styling">
+                    <p>Här kan du lägga till adresser som du ofta reser till. </p>
+                    <p>Hantera dina favoriter genom att klicka på krysset till häger om adressen för att radera den.
+                    </p>
+                </article>
+                <!-- favorite adresses -->
+                <article class="favorit">
+                    <h2>Hemma</h2>
+                    <p>Kungsgatan 98, 90365 Umeå</p>
+                    <p><img src="img/close_red_24dp.svg" alt="Close icon"> Radera
+                    </p>
+                </article>
+                <article class="favorit">
+                    <h2>Biblioteket</h2>
+                    <p>Majorsgatan 2, 90421 Umeå</p>
+                    <p><img src="img/close_red_24dp.svg" alt="Close icon"> Radera
+                    </p>
+                </article>
+                <!-- add fav adress -->
+                <article>
+                    <form action="#" class="lagg-till-fav">
+                        <label for="namn">Namn på adressen:</label>
+                        <input type="text" name="namn" id="namn" placeholder="Apoteket">
+                        <label for="adress">Adress:</label>
+                        <input type="text" name="adress" id="adress" placeholder="Storgatan 17">
+                        <label class="left" for="postnr">Postnummer:</label>
+                        <label class="right" for="ort">Ort:</label>
+                        <input class="left" type="number" name="postnr" id="postnr" placeholder="90443">
+                        <input class="right" type="text" name="ort" id="ort" placeholder="Umeå">
+                        <input type="submit" value="Spara">
+                    </form>
+                </article>
+
+            </section>
+        </main>
+        <!-- footer with contact, GDPR and accessability -->
+        <footer>
+            <div class="footergrid">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="tillganglighet.html">Tillgänglighetsredogörelse</a>
+                <a href="gdpr.html">Personuppgifter - GDPR</a>
+                <p class="footercenter"><a href="https://fonts.google.com/icons">Ikoner från Google Material Icons</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

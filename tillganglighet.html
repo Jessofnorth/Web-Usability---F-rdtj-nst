@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize css to make everything look the same accross browsers -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- faviconer -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Färdtjänst i Umeå kommun</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header with nav/mobile nav -->
+        <header>
+            <!-- skip to main content, only visible when in focus -->
+            <a class="skip-nav" href="#main">Till huvudinnehållet</a>
+            <nav>
+                <!-- nav hamburger button -->
+                <button name="meny" class="hamburger" aria-label="hamburger-menu"><span class="bar"></span></button>
+                <a class="logo" href="index.html"><img class="logo" src="img/Logotyp.svg" alt="Färdtjänst i Umeå kommun logotyp"></a>
+                <div class="menu">
+
+                    <!-- desktop menu -->
+                    <a href="minasidor.html">Mina Sidor</a>
+                    <div class="dropdownbtn">
+                        <button class="menubtn">Resor<img class="menuopen" aria-label="dropdown-menu" src="img/expand_more_white_24dp.svg"
+                            alt="Resor">
+                    </button>
+                        <!-- dropdown menu -->
+                        <div class="dropdown">
+                            <a href="minaresor.html">Mina Resor</a>
+                            <a href="bokaresa.html">Boka Resa</a>
+                            <a href="minaresor.html">Avboka Resa</a>
+                            <a href="minaresor.html">Ändra Resa</a>
+                        </div>
+                    </div>
+                    <a href="om.html">Om Färdtjänst</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+                <!-- search icon / bar -->
+                <button class="search" aria-label="open search"><img src="img/search_black_24dp.svg" alt="Sök"></button>
+                <button class="close" aria-label="close search"><img src="img/close_white_24dp.svg"
+                        alt="Stäng"></button>
+                <!-- search bar -->
+                <div class="search-padd">
+                    <label class="visually-hidden" for="search">Sök</label>
+                    <input aria-labelledby="search" class="search-bar" type="search" name="search" id="search" placeholder="Sök">
+                    <button class="searchclose close" aria-label="search"><img src="img/search_black_24dp.svg"
+                            alt="Sök"></button>
+                </div>
+            </nav>
+        </header>
+        <!-- mobile nav hidden/showing on click -->
+        <nav class="mobile-nav">
+            <a href="minasidor.html">Mina Sidor</a>
+            <a href="minaresor.html">Mina Resor</a>
+            <a href="bokaresa.html">Boka Resa</a>
+            <a href="om.html">Om Färdtjänst</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <!-- main content -->
+        <main id="main">
+            <section class="mobilpadding">
+                <!-- longer heading with wordbreak at suitable point -->
+                <h1>Tillgänglighets&shy;redogörelse</h1>
+                <!-- article with sections -->
+                <article class="text-styling">
+                    <section>
+                        <h2>Tillgänglighet för Färdtjänst i Umeå kommun</h2>
+                        <p>Färdtjänst i Umeå kommun står bakom den här webbplatsen. Vi vill att så många som möjligt ska kunna använda den. Det här dokumentet beskriver hur Färdtjänst i Umeå kommun uppfyller lagen om tillgänglighet till digital offentlig
+                            service, eventuella kända tillgänglighetsproblem och hur du kan rapportera brister till oss så att vi kan åtgärda dem.</p>
+
+                    </section>
+                    <section>
+                        <h2>Hur tillgänglig är webbplatsen?</h2>
+                        <p>Vissa delar av webbplatsen är ej tillgängliga, se avsnittet ”Tekniska information om webbplatsens tillgänglighet”. Vi är medvetna om bristerna och jobbar på att förbättra webbplatsen.</p>
+                    </section>
+                    <section>
+                        <h2>Vad kan du göra om du inte kan använda delar av webbplatsen? </h2>
+                        <p>Om du behöver innehåll från Färdtjänst i Umeå kommun som inte är tillgängligt för dig, men som är undantaget från lagens tillämpningsområde enligt beskrivning nedan, <a href="kontakt.html">kan du meddela oss</a>. Svarstiden är
+                            normalt 2 arbetsdagar.</p>
+                        <ul>
+                            <li>Skicka epost till <a href="mailto:fardtjanst@fardtjanstiume.se">fardtjanst@fardtjanstiume.se</a></li>
+                            <li>Ring: <strong>090-000 000</strong></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Rapportera brister i webbplatsens tillgänglighet</h2>
+                        <p>Vi strävar hela tiden efter att förbättra webbplatsens tillgänglighet. Om du upptäcker problem som inte är beskrivna på den här sidan, eller om du anser att vi inte uppfyller lagens krav, <a href="kontakt.html">meddela oss</a>                            så att vi får veta att problemet finns.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Tillsyn</h2>
+                        <p>Myndigheten för digital förvaltning har ansvaret för tillsyn över lagen om tillgänglighet till digital offentlig service. Om du inte är nöjd med hur vi hanterar ditt påpekande om bristande webbtillgänglighet eller din begäran om
+                            tillgängliggörande av innehåll kan du <a href="https://www.digg.se/digital-tillganglighet/anmal-bristande-tillganglighet">anmäla
+                                till Myndigheten för digital förvaltning</a>.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Teknisk information om webbplatsens tillgänglighet</h2>
+                        <p>Webbplatsen strävar efter att uppfylla alla de krav som finns enligt lagen om tillgänglighet till digital offentlig service. I dagsläget uppfylls inte nedan listade krav.
+                        </p>
+                        <ul>
+                            <li>Sökfunktionen fungerar ej. </li>
+                            <li>Webbplatsen har endast en typ av navigering, sidhuvudet.</li>
+                            <li>Fel vid inmatningar på webbplatsen registreras ej. Till exempel behöver inte obligatoriska fält fyllas i för att ta sig vidare. </li>
+                            <li>Alla länkar på webbplatsen är inte tydliga. Vissa länkars text är tillexempel en hel URL. </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Hur vi testat webbplatsen</h2>
+                        <p>Vi har gjort en självskattning (intern testning) av Färdtjänst i Umeå kommun.</p>
+                        <p>Senaste bedömningen gjordes den 14 januari 2022.</p>
+                        <p>Redogörelsen uppdaterades senast den 14 januari.</p>
+                        <P>Sidan uppdateradesden 14 januari 2022.</P>
+                    </section>
+
+                </article>
+
+            </section>
+        </main>
+        <!-- footer with contact, GDPR and accessability -->
+        <footer>
+            <div class="footergrid">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="tillganglighet.html">Tillgänglighetsredogörelse</a>
+                <a href="gdpr.html">Personuppgifter - GDPR</a>
+                <p class="footercenter"><a href="https://fonts.google.com/icons">Ikoner från Google Material Icons</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
